@@ -15,4 +15,3 @@ VOLUME /var/www/html
 ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
 
 EXPOSE 80
-
