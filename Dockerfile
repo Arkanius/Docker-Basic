@@ -12,8 +12,7 @@ ENV APACHE_LOG_DIR="/var/log/apache2"
 
 VOLUME /var/www/html
 
-CMD ["-D", "FOREGROUND"]
-ENTRYPOINT ["apachectl"]
+ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
 
 EXPOSE 80
 
