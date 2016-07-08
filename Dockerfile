@@ -16,6 +16,3 @@ ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
 
 EXPOSE 80
 
-
-
-
