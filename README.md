@@ -1,1 +1,1 @@
-Collection of basics Dockerfile applications example
+Collection of basic Dockerfile examples
