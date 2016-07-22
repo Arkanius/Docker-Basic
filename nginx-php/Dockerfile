@@ -2,11 +2,10 @@ FROM debian
 
 MAINTAINER Victor Gazotti vtr.gomes@hotmail.com
 
-LABEL Description="Starting web container with nginx and php5-fpm"
+LABEL Description="Starting web container with nginx"
 
 
 RUN apt-get update && apt-get install -y nginx && \
- apt-get install php5-fpm -y && \
  apt-get clean
 
 ADD ./conf/default /etc/nginx/sites-available
