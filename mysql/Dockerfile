@@ -6,11 +6,12 @@ LABEL Description="Container with MySql service"
 
 EXPOSE 3306
 
-ENV MYSQL_DB test
-ENV MYSQL_USER root
-ENV MYSQL_PASS ""
+ENV MYSQL_USER=root \
+    MYSQL_DATA_DIR=/var/lib/mysql \
+    MYSQL_RUN_DIR=/run/mysqld \
+    MYSQL_LOG_DIR=/var/log/mysql
 
-RUN apt-get update && apt-get install -yq  mysql-server
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq  mysql-server
 
 ENTRYPOINT ["/usr/bin/mysqld_safe"]
 
