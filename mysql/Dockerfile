@@ -16,7 +16,7 @@ VOLUME ["/var/lib/mysql", "/var/log/mysql", "/var/run/mysqld"]
 
 RUN chown -R mysql:mysql /var/lib/mysql && \
     service mysql start && \
-    mysql "CREATE DATABASE docker; GRANT ALL PRIVILEGES ON docker.* TO docker@localhost IDENTIFIED BY 'docker'" 
+    mysql "CREATE DATABASE docker; USE docker;" 
 
 USER mysql
 
