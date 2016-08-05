@@ -12,14 +12,13 @@ ENV MYSQL_USER=root \
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq  mysql-server && mysql_install_db && service mysql start
 
-USER mysql
-
-
 VOLUME ["/var/lib/mysql", "/var/log/mysql", "/var/run/mysqld"]
 
+RUN chown -R mysql:mysql /var/lib/mysql && \
+    service mysql start && \
+    mysql -u root -pdocker -e "create database docker; GRANT ALL PRIVILEGES ON docker.* TO docker@localhost IDENTIFIED BY 'docker'" 
 
-#RUN mysql -u root -pdocker -e "create database docker; GRANT ALL PRIVILEGES ON docker.* TO docker@localhost IDENTIFIED BY 'docker'" 
-
+USER mysql
 
 #ENTRYPOINT ["/usr/bin/mysqld_safe"]
 
