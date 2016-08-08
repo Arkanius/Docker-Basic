@@ -13,11 +13,12 @@ ENV MYSQL_USER=root \
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \ 
     apt-get install -yq  mysql-server && mysql_install_db && \ 
-    chown -R mysql:mysql /var/lib/mysql 
+    chown -R mysql:mysql /var/lib/mysql && \
+    chown -R mysql:mysql /var/run/mysqld
 
 VOLUME ["/var/lib/mysql", "/var/log/mysql", "/var/run/mysqld"]
 
-USER mysql
+#USER mysql
 
-ENTRYPOINT ["/usr/bin/mysqld_safe"]
+#ENTRYPOINT ["/usr/bin/mysqld_safe"]
 
