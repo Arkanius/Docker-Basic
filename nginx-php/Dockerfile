@@ -6,7 +6,7 @@ LABEL Description="Starting web container with nginx and php5-fpm"
 
 
 RUN apt-get update && apt-get install -y nginx && \
- apt-get install php5-fpm -y && \
+ apt-get install php5-fpm php5-mysql -y && \
  apt-get clean
 
 ADD ./conf/default /etc/nginx/sites-available
