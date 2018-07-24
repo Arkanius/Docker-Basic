@@ -1,7 +1,7 @@
 ### Simple docker-compose file to run R with mongo or mysql databases
 
 
-##### This file contains a link with mongo and mongo-express, so, fell free to use or not it.
+#### This file contains a link with mongo and mongo-express, so, fell free to use or not it.
 
 
 * How to run:
