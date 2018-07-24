@@ -4,10 +4,18 @@
 #### This file contains a link with mongo and mongo-express, so, fell free to use or not it.
 
 
-* How to run:
+1. How to run:
 ```shell
 docker-compose up -d
 ```
+
+2. See mongo-express:
+   
+   Go to your *browser* and type: `http://127.0.0.1:8081`
+   You should see a reunning instance of **mongo-express** 
+   mongo-express: 
+![mongo-express](https://github.com/arkanius/Docker-Basic/r/mongo-express.png "mongo-express")
+
 
 *  Import example:
 ```shell
