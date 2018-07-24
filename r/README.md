@@ -14,7 +14,7 @@ docker-compose up -d
    Go to your *browser* and type: `http://127.0.0.1:8081`
    You should see a reunning instance of **mongo-express** 
    mongo-express: 
-![mongo-express](https://github.com/arkanius/Docker-Basic/r/mongo-express.png "mongo-express")
+![mongo-express](https://github.com/Arkanius/Docker-Basic/blob/master/r/mongo-express.png "mongo-express")
 
 
 *  Import example:
