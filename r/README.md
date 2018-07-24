@@ -12,8 +12,7 @@ docker-compose up -d
 2. See mongo-express:
    
    Go to your *browser* and type: `http://127.0.0.1:8081`
-   You should see a reunning instance of **mongo-express** 
-   mongo-express: 
+   You should see a reunning instance of **mongo-express** like this:
 ![mongo-express](https://github.com/Arkanius/Docker-Basic/blob/master/r/mongo-express.png "mongo-express")
 
 
